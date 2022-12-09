@@ -73,19 +73,24 @@ void showBoards()
 
 void placeCarrier()
 {	
-	int inX;
-	int inY;
+	int inX = 0;
+	int inY = 0;
 	int direction;
 
 	cout << "Input the center x coordinate of your Carrier : ";
 	cin >> inX;
 	if (inX > 10 || inX <= 0)
 	{
-		cout << "Invalid Input";
+		cout << "Invalid Input" << endl;
 		placeCarrier();
 	}
 	cout << "Input the center y coordinate of your Carrier: ";
 	cin >> inY;
+	if (inY > 10 || inY <= 0)
+	{
+		cout << "Invalid Input" << endl;
+		placeCarrier();
+	}
 	
 	cout << "Enter 1 for the ship to go horizontal or any other number for the ship to go vertical ";
 	cin >> direction;
